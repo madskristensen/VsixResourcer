@@ -3,7 +3,7 @@
     <metadata>
         <!-- Required elements-->
         <id>Madskristensen.VSSDK.Resourcer</id>
-        <version>0.1</version>
+        <version>1.0.105</version>
         <description>Adds a .resx file if none exist</description>
         <authors>Mads Kristensen</authors>
         <iconUrl>https://aka.ms/vsextensibilityicon</iconUrl>

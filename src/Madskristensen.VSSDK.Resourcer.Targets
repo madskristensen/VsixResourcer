@@ -4,10 +4,8 @@
   <Target Name="AddMissingCtoResx" BeforeTargets="Compile">
     <ItemGroup>
       <_CtoResx Include="@(EmbeddedResource)" Condition=" '%(EmbeddedResource.MergeWithCTO)' == 'true' "></_CtoResx>
-    </ItemGroup>
-
-    <ItemGroup Condition=" '@(_CtoResx->Count())' == '0' ">
-      <EmbeddedResource Include="%(MSBuildThisFileDirectory)\Empty.resx">
+      
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Empty.resx"  Condition=" '@(_CtoResx)' == '' ">
         <MergeWithCTO>true</MergeWithCTO>
         <ManifestResourceName>VSPackage</ManifestResourceName>
       </EmbeddedResource>
