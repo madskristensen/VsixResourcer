@@ -6,7 +6,7 @@
       <_CtoResx Include="@(EmbeddedResource)" Condition=" '%(EmbeddedResource.MergeWithCTO)' == 'true' "></_CtoResx>
     </ItemGroup>
 
-    <ItemGroup Condition=" '@(_CtoResx->Count())' > '0' ">
+    <ItemGroup Condition=" '@(_CtoResx->Count())' == '0' ">
       <EmbeddedResource Include="%(MSBuildThisFileDirectory)\Empty.resx">
         <MergeWithCTO>true</MergeWithCTO>
         <ManifestResourceName>VSPackage</ManifestResourceName>

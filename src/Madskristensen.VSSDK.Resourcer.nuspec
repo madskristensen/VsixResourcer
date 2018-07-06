@@ -6,6 +6,9 @@
         <version>0.1</version>
         <description>Adds a .resx file if none exist</description>
         <authors>Mads Kristensen</authors>
+        <iconUrl>https://aka.ms/vsextensibilityicon</iconUrl>
+        <projectUrl>https://github.com/madskristensen/VsixResourcer</projectUrl>
+        <licenseUrl>https://github.com/madskristensen/VsixResourcer/blob/master/LICENSE</licenseUrl>
 
         <!-- Optional elements -->
         <!-- ... -->
