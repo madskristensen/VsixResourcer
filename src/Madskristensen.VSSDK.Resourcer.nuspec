@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Madskristensen.VSSDK.Resourcer</id>
+        <version>0.1</version>
+        <description>Adds a .resx file if none exist</description>
+        <authors>Mads Kristensen</authors>
+
+        <!-- Optional elements -->
+        <!-- ... -->
+    </metadata>
+
+    <files>
+        <file src="*.targets" target="build" />
+        <file src="Empty.resx" target="build" />
+    </files>
+</package>
