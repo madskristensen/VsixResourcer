@@ -7,10 +7,10 @@ before_build:
   - ps: Vsix-IncrementNuspecVersion .\src\*.nuspec
 
 build_script:
-  - nuget pack .src\*.nuspec
+  - nuget pack .\src\*.nuspec
 
 artifacts:
-  - path: build\**\*.nupkg
+  - path: src\*.nupkg
     name: NuGet package
 
 deploy:
