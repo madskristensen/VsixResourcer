@@ -7,7 +7,7 @@ before_build:
   - ps: Vsix-IncrementNuspecVersion .\src\*.nuspec
 
 build_script:
-  - nuget pack .\src\*.nuspec
+  - nuget pack .\src\Madskristensen.VSSDK.Resourcer.nuspec
 
 artifacts:
   - path: src\*.nupkg
