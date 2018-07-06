@@ -4,7 +4,8 @@
         <!-- Required elements-->
         <id>Madskristensen.VSSDK.Resourcer</id>
         <version>1.0.105</version>
-        <description>Adds a .resx file if none exist</description>
+        <summary>Adds a .resx file with MergeWithCTO proprety set if none exist.</summary>
+        <description>Adds a .resx file with MergeWithCTO proprety set if none exist. This allows you to get rid of the .resx and .ico files in your VSIX projects</description>
         <authors>Mads Kristensen</authors>
         <iconUrl>https://aka.ms/vsextensibilityicon</iconUrl>
         <projectUrl>https://github.com/madskristensen/VsixResourcer</projectUrl>
