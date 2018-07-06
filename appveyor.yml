@@ -10,7 +10,7 @@ build_script:
   - nuget pack .\src\Madskristensen.VSSDK.Resourcer.nuspec
 
 artifacts:
-  - path: src\*.nupkg
+  - path: .\*.nupkg
     name: NuGet package
 
 deploy:
