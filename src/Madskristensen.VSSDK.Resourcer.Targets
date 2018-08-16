@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <Target Name="AddMissingCtoResx" BeforeTargets="Compile">
+  <Target Name="AddMissingCtoResx" BeforeTargets="AssignTargetPaths">
+
     <ItemGroup>
-      <_CtoResx Include="@(EmbeddedResource)" Condition=" '%(EmbeddedResource.MergeWithCTO)' == 'true' "></_CtoResx>
-      
-      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Empty.resx"  Condition=" '@(_CtoResx)' == '' ">
+      <_CtoResx Include="%(EmbeddedResource.OutputResource)" Condition=" '%(EmbeddedResource.MergeWithCTO)' == 'true' " />
+
+      <EmbeddedResource Include="$(MSBuildThisFileDirectory)\Empty.resx" Condition=" '@(_CtoResx)' == '' ">
         <MergeWithCTO>true</MergeWithCTO>
         <ManifestResourceName>VSPackage</ManifestResourceName>
       </EmbeddedResource>
     </ItemGroup>
+
   </Target>
 
 </Project>
